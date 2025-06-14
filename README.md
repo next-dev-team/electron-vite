@@ -1,108 +1,114 @@
-# Electron-Vite-React 项目模板
+# Electron-Vite-React Project Template
 
 <div align="center">
 
-![Electron](https://img.shields.io/badge/Electron-35.x-47848F?logo=electron)
-![React](https://img.shields.io/badge/React-19.x-61DAFB?logo=react)
-![Vite](https://img.shields.io/badge/Vite-6.x-646CFF?logo=vite)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+![Electron](https://img.shields.io/badge/Electron-35.x-47848F?logo=electron) ![React](https://img.shields.io/badge/React-19.x-61DAFB?logo=react) ![Vite](https://img.shields.io/badge/Vite-6.x-646CFF?logo=vite) ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript) [![License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
 </div>
 
-## 🚀 项目简介
-一套基于现代技术栈的桌面应用开发模板，集成了完整的开发环境配置和最佳实践，助你快速启动项目开发。
+## 🚀 Project Overview
 
-## 🎯 主要特性
+A desktop application development template based on modern tech stack, integrated with complete development environment configuration and best practices to help you quickly start project development.
 
-### 核心功能
-- ✨ **路由懒加载** - 优化首屏加载时间
-- 🔄 **状态管理 (Zustand)** - 简单高效的状态管理方案
-- 📡 **HTTP 请求封装** - 基于 Axios 的统一请求处理
-- 🎭 **Mock 服务** - 支持接口数据模拟，提供场景化的数据管理
-- 🎨 **UI 框架** - 集成 Ant Design + TailwindCSS
-- 🔄 **热重载** - 快速的开发体验
-- 🧪 **测试支持** - 内置 Vitest 测试框架
+## 🎯 Key Features
 
+### Core Features
 
-### 开发体验
-- 📝 ESLint + Prettier + Stylelint - 代码质量保证
-- 🔍 TypeScript 类型检查
-- 🎨 自动格式化 import 语句顺序
-- 🧪 Vitest 单元测试支持
+- ✨ **Lazy Loading Routes** - Optimized initial page loading time
+- 🔄 **State Management (Zustand)** - Simple and efficient state management solution
+- 📡 **HTTP Request Wrapping** - Unified request handling based on Axios
+- 🎭 **Mock Service** - Supports API data simulation with scenario-based data management
+- 🎨 **UI Framework** - Integrated Ant Design + TailwindCSS
+- 🔄 **Hot Reload** - Fast development experience
+- 🧪 **Testing Support** - Built-in Vitest testing framework
 
-### 状态管理
+### Development Experience
+
+- 📝 ESLint + Prettier + Stylelint - Code quality assurance
+- 🔍 TypeScript type checking
+- 🎨 Automatic import statement formatting
+- 🧪 Vitest unit test support
+
+### State Management
+
 - Zustand
 - Immer
 - optics-ts
 
-### 工具库
+### Tool Libraries
+
 - React Router v7
-- Axios (封装 @liangskyli/axios-request)
+- Axios (wrapped with @liangskyli/axios-request)
 - classnames
 - koffi (Node.js C FFI)
 - electron-log
 - electron-updater
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 环境要求
+### Environment Requirements
+
 - Node.js: ^18.20.0 || ^20.0.0 || >=22.0.0
-- 包管理器: pnpm
+- Package Manager: pnpm
 
-### 安装依赖
+### Install Dependencies
+
 ```bash
 pnpm install
 ```
 
-### 开发模式
+### Development Modes
+
 ```bash
-# 标准开发模式
+# Standard Development Mode
 pnpm dev
 
-# 带 Mock 数据的开发模式
+# Development Mode with Mock Data
 pnpm dev:mock
-pnpm dev:mock-server  # 新开终端运行 mock 服务
+pnpm dev:mock-server  # Start mock service in a new terminal
 ```
 
-### 生产构建
+### Production Build
+
 ```bash
-# windows打包
+# Build for Windows
 pnpm build:pro:win
-# mac打包
+# Build for Mac
 pnpm build:pro:mac
 ```
 
 ## 🔧 环境配置
 
-项目支持多环境配置：
-- `.env` - 基础配置
-- `.env.dev` - 开发环境
-- `.env.pro` - 生产环境
-- `.env.test` - 测试环境
-- `.env.dev-mock` - Mock 开发环境
+The project supports multiple environment configurations:
+
+- `.env` - Base configuration
+- `.env.dev` - Development environment
+- `.env.pro` - Production environment
+- `.env.test` - Test environment
+- `.env.dev-mock` - Mock development environment
 
 ## 📚 技术栈
 
 ### 🛠 技术栈选型
 
-- **React 19 & React-DOM**：使用最新版 React 实现前端高性能和更流畅的用户体验。
-- **React-Router**：最新v7版本，支持路由懒加载，优化页面切换性能。
-- **[tailwindcss](https://tailwindcss.com/)**：使用tailwindcss@4版本。
-- **Less 预编译**：使用xxx.module.less，支持CSS Modules）。
-- **SCSS 预编译**：全面采用新版 SCSS，使用 `@use` 替代 `@import`，模块化更强。
-- **zustand**：轻量级的状态管理库。通过对比 Redux、Dva、React-Toolkit、MobX，以及 `useContext` 结合 `useReducer` 的管理方式，最终选择了更简单的 Zustand。
-- **Immer**：简化不可变数据结构操作，尤其在多层次嵌套对象中处理更方便。
-- **optics-ts**：适用于需要对大型嵌套对象进行深度操作，且希望代码类型安全、易读的场景。
-- **classnames**：动态类名管理工具，特别适合条件渲染样式。
-- **[@liangskyli/axios-request](https://github.com/liangskyli/request/blob/main/packages/axios-request/README.md)**：封装 HTTP 请求库，更方便与后端接口对接。
-- **[@liangskyli/mock](https://github.com/liangskyli/mock#readme)**：支持接口数据本地mock，支持数据场景化和热更新。
-- **[koffi](https://koffi.dev/)**：Node.js C FFI 模块,支持调用各个平台的共享库，如：.so, .dll, .dylib。可以不需要安装C++ 编译器
-- **[electron-log](https://github.com/megahertz/electron-log)**：提供electron主进程，预加载脚本，渲染进程日志日志功能，默认console信息写日志
-- **[antd](https://ant.design/docs/react/introduce-cn)**：基于 Ant Design 设计体系的 React UI 组件库
-- **单元测试**：基于vitest实现代码的单元测试。
+- **React 19 & React-DOM**: Using the latest version of React for high-performance front-end and smoother user experience.
+- **React-Router**: Latest v7 version, supports lazy loading routes, and optimizes page transition performance.
+- **[tailwindcss](https://tailwindcss.com/)**: Using tailwindcss@4 version.
+- **Less Preprocessor**: Using xxx.module.less, supports CSS Modules.
+- **SCSS Preprocessor**: Fully adopts new SCSS version, using `@use` instead of `@import`, stronger modularity.
+- **zustand**: Lightweight state management library. After comparing Redux, Dva, React-Toolkit, MobX, and `useContext` combined with `useReducer` management methods, we ultimately chose the simpler Zustand.
+- **Immer**: Simplifies immutable data structure operations, especially convenient for handling deeply nested objects.
+- **optics-ts**: Suitable for scenarios requiring deep operations on large nested objects, with type-safe and readable code.
+- **classnames**: Dynamic class name management tool, especially suitable for conditional rendering styles.
+- **[@liangskyli/axios-request](https://github.com/liangskyli/request/blob/main/packages/axios-request/README.md)**: HTTP request library wrapper, making it easier to connect with backend APIs.
+- **[@liangskyli/mock](https://github.com/liangskyli/mock#readme)**: Supports local API data mocking, with scenario-based data management and hot updates.
+- **[koffi](https://koffi.dev/)**: Node.js C FFI module, supports calling shared libraries on various platforms, such as .so, .dll, .dylib. No need to install C++ compiler.
+- **[electron-log](https://github.com/megahertz/electron-log)**: Provides logging functionality for electron main process, preload scripts, and renderer process, default console information is written to logs.
+- **[antd](https://ant.design/docs/react/introduce-cn)**: React UI component library based on Ant Design design system
+- **Unit Testing**: Code unit testing implemented based on vitest.
 
 ### 核心依赖
+
 - Electron 35
 - React 19
 - React Router v7
@@ -113,6 +119,7 @@ pnpm build:pro:mac
 - Axios (HTTP 请求)
 
 ### 工具链
+
 - ESLint
 - Prettier
 - Stylelint
@@ -121,18 +128,22 @@ pnpm build:pro:mac
 - Vitest
 
 ### 🔧 其他推荐工具
+
 - **[接口开发提效工具](https://github.com/liangskyli/mock/blob/master/packages/http-mock-gen/README.md)**：基于openapi v3 生成 ts数据类型和http mock 数据代码。
 
 ## 📝 开发规范
 
 ### 代码风格
+
 - 文件/文件夹命名：`kebab-case`
 - 样式命名：BEM 规范
 - 组件命名：PascalCase
 - TypeScript 优先
 
 ### Git 提交规范
+
 使用 Conventional Commits 规范，例如：
+
 - `feat: add new feature`
 - `fix: resolve bug`
 - `docs: update documentation`
@@ -202,26 +213,30 @@ pnpm build:pro:mac
 
 ## 🔄 降级指南
 
-### 如需降级到 React 18，请执行：
+### To downgrade to React 18, execute:
+
 ```bash
 pnpm install react@18.3.1 react-dom@18.3.1
 ```
-注意：需要替换 React 19 特有功能
-- RouterTitle组件和页面动态设置里title标签使用react-helmet替换
 
-### Electron 版本降级
-- 你可以手动将 package.json 中的 electron 修改至低版本，支持electron最低版本25.0.0
+Note: Need to replace React 19 specific features
 
+- Replace RouterTitle component and page dynamic title setting with react-helmet
+
+### Electron Version Downgrade
+
+- You can manually modify the electron version in package.json to a lower version, supporting a minimum version of 25.0.0
 
 ## 🤝 贡献指南
 
-欢迎提交 Issue 和 Pull Request。请确保：
-1. Fork 项目并创建特性分支
-2. 遵循项目代码规范
-3. 提供清晰的提交信息
-4. 更新相关文档
+We welcome Issue submissions and Pull Requests. Please ensure:
 
-## 📄 许可证
+1. Fork the project and create a feature branch
+2. Follow the project's code standards
+3. Provide clear commit messages
+4. Update relevant documentation
+
+## 📄 License
 
 [MIT License](LICENSE)
 
@@ -230,6 +245,7 @@ pnpm install react@18.3.1 react-dom@18.3.1
 如果这个项目对你有帮助，请给它一个 Star ⭐️
 
 ---
-<div align="center">
-Made with ❤️ by <a href="https://github.com/liangskyli/electron-vite-react">Electron-Vite-React</a>
-</div>
+
+## Base Template
+
+https://github.com/liangskyli/electron-vite-react
