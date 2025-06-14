@@ -49,35 +49,35 @@ A desktop application development template based on modern tech stack, integrate
 ### Environment Requirements
 
 - Node.js: ^18.20.0 || ^20.0.0 || >=22.0.0
-- Package Manager: pnpm
+- Package Manager: yarn
 
 ### Install Dependencies
 
 ```bash
-pnpm install
+yarn install
 ```
 
 ### Development Modes
 
 ```bash
 # Standard Development Mode
-pnpm dev
+yarn dev
 
 # Development Mode with Mock Data
-pnpm dev:mock
-pnpm dev:mock-server  # Start mock service in a new terminal
+yarn dev:mock
+yarn dev:mock-server  # Start mock service in a new terminal
 ```
 
 ### Production Build
 
 ```bash
 # Build for Windows
-pnpm build:pro:win
+yarn build:pro:win
 # Build for Mac
-pnpm build:pro:mac
+yarn build:pro:mac
 ```
 
-## 🔧 环境配置
+## 🔧 Environment Configuration
 
 The project supports multiple environment configurations:
 
@@ -87,9 +87,9 @@ The project supports multiple environment configurations:
 - `.env.test` - Test environment
 - `.env.dev-mock` - Mock development environment
 
-## 📚 技术栈
+## 📚 Tech Stack
 
-### 🛠 技术栈选型
+### 🛠 Tech Stack Selection
 
 - **React 19 & React-DOM**: Using the latest version of React for high-performance front-end and smoother user experience.
 - **React-Router**: Latest v7 version, supports lazy loading routes, and optimizes page transition performance.
@@ -107,7 +107,7 @@ The project supports multiple environment configurations:
 - **[antd](https://ant.design/docs/react/introduce-cn)**: React UI component library based on Ant Design design system
 - **Unit Testing**: Code unit testing implemented based on vitest.
 
-### 核心依赖
+### Core Dependencies
 
 - Electron 35
 - React 19
@@ -115,10 +115,10 @@ The project supports multiple environment configurations:
 - TypeScript
 - Vite 6
 - Tailwind CSS v4
-- Zustand (状态管理)
-- Axios (HTTP 请求)
+- Zustand (State Management)
+- Axios (HTTP Requests)
 
-### 工具链
+### Toolchain
 
 - ESLint
 - Prettier
@@ -127,91 +127,91 @@ The project supports multiple environment configurations:
 - Commitlint
 - Vitest
 
-### 🔧 其他推荐工具
+### 🔧 Other Recommended Tools
 
-- **[接口开发提效工具](https://github.com/liangskyli/mock/blob/master/packages/http-mock-gen/README.md)**：基于openapi v3 生成 ts数据类型和http mock 数据代码。
+- **[API Development Efficiency Tool](https://github.com/liangskyli/mock/blob/master/packages/http-mock-gen/README.md)**: Generates TypeScript data types and HTTP mock data code based on OpenAPI v3.
 
-## 📝 开发规范
+## 📝 Development Guidelines
 
-### 代码风格
+### Code Style
 
-- 文件/文件夹命名：`kebab-case`
-- 样式命名：BEM 规范
-- 组件命名：PascalCase
-- TypeScript 优先
+- File/Folder Naming: `kebab-case`
+- Style Naming: BEM convention
+- Component Naming: PascalCase
+- TypeScript preferred
 
-### Git 提交规范
+### Git Commit Guidelines
 
-使用 Conventional Commits 规范，例如：
+Use Conventional Commits format, for example:
 
 - `feat: add new feature`
 - `fix: resolve bug`
 - `docs: update documentation`
 
-## 项目结构
+## Project Structure
 
 ```tree
-├── .husky # Husky 配置文件夹，用于管理 Git 钩子
-│   └── commit-msg # 检查提交钩子配置
-│   └── pre-commit # 格式化钩子配置
-├── __test__ # 单元测试文件目录
-├── electron # electron代码目录
-│   └── common # 主进程和预加载脚本的通用代码
-│   └── main # 主进程代码
-│   └── preload # 预加载脚本代码
-├── mock # 接口mock数据
-├── public # 静态资源目录，用于存放不经过 Vite 处理的静态资源
-├── resources # electron资源目录，用于主进程和预加载脚本的资源
-├── src # 源代码目录
-│ ├── assets # 静态资源文件，如图片、字体等
-│ ├── components # 公共组件目录
-│ ├── hooks # 自定义 React Hooks
-│ │ └── use-router # 路由操作 Hook
+├── .husky # Husky configuration directory for managing Git hooks
+│   └── commit-msg # Commit message hook configuration
+│   └── pre-commit # Format hook configuration
+├── __test__ # Unit test file directory
+├── electron # Electron code directory
+│   └── common # Common code for main process and preload scripts
+│   └── main # Main process code
+│   └── preload # Preload script code
+├── mock # API mock data
+├── public # Static resources directory for files not processed by Vite
+├── resources # Electron resources directory for main process and preload scripts
+├── src # Source code directory
+│ ├── assets # Static resource files like images and fonts
+│ ├── components # Public component directory
+│ ├── hooks # Custom React Hooks
+│ │ └── use-router # Router operation Hook
 │ │ └── ...
-│ ├── icons # svg 图标
-│ ├── layouts # 页面布局组件
-│ ├── pages # 页面组件
-│ ├── router # 路由配置
-│ │ └── modules # 页面路由配置项
-│ │ └── utils # 路由相关工具函数
-│ │ └── index.tsx # 路由入口
-│ ├── services # API 服务封装
-│ ├── store # 状态管理
-│ │ └── modules # 状态管理模块
-│ │ └── index.ts # 状态入口
-│ ├── styles # 样式
-│ ├── types # TypeScript 类型定义
-│ └── utils # 工具函数
-├── .commitlintrc.js # Commitlint 配置文件，用于 Git 提交信息的风格检查
-├── .editorconfig # 编辑器配置文件，用于统一不同编辑器的代码风格
-├── .env # 基础环境配置文件
-├── .env.dev # 开发环境配置文件
-├── .env.dev-mock # mock开发环境配置文件
-├── .env.pro # 生产环境配置文件
-├── .env.test # 测试环境配置文件
-├── .gitignore # git忽略文件
-├── .npmrc # npm配置文件
-├── .prettierignore # 代码风格配置忽略文件
-├── .prettierrc.js # Prettier 配置文件，用于代码格式化
-├── .stylelintignore # 样式风格配置忽略文件
-├── electron.vite.config.ts # electron-vite配置文件
-├── electron-builder.json # electron-builder配置文件
-├── eslint.config.js # ESLint 配置文件，用于代码风格和错误检查
-├── index.html # 入口页面
-├── lint-staged.config.js # Lint-Staged 配置文件，用于在 Git 提交前自动运行 Linters
-├── package.json # 项目依赖配置文件
-├── mock.config.ts # mock服务配置文件
-├── package.ts # 包配置文件
-├── pnpm-lock.yaml # 安装包锁定文件
+│ ├── icons # SVG icons
+│ ├── layouts # Page layout components
+│ ├── pages # Page components
+│ ├── router # Router configuration
+│ │ └── modules # Page router configuration items
+│ │ └── utils # Router-related utility functions
+│ │ └── index.tsx # Router entry point
+│ ├── services # API service encapsulation
+│ ├── store # State management
+│ │ └── modules # State management modules
+│ │ └── index.ts # State entry point
+│ ├── styles # Styles
+│ ├── types # TypeScript type definitions
+│ └── utils # Utility functions
+├── .commitlintrc.js # Commitlint configuration file for Git commit message style checking
+├── .editorconfig # Editor configuration file for unifying code style across different editors
+├── .env # Base environment configuration file
+├── .env.dev # Development environment configuration file
+├── .env.dev-mock # Mock development environment configuration file
+├── .env.pro # Production environment configuration file
+├── .env.test # Test environment configuration file
+├── .gitignore # Git ignore file
+├── .npmrc # npm configuration file
+├── .prettierignore # Code style configuration ignore file
+├── .prettierrc.js # Prettier configuration file for code formatting
+├── .stylelintignore # Style style configuration ignore file
+├── electron.vite.config.ts # electron-vite configuration file
+├── electron-builder.json # electron-builder configuration file
+├── eslint.config.js # ESLint configuration file for code style and error checking
+├── index.html # Entry page
+├── lint-staged.config.js # Lint-Staged configuration file for running Linters before Git commit
+├── package.json # Project dependency configuration file
+├── mock.config.ts # Mock service configuration file
+├── package.ts # Package configuration file
+├── pnpm-lock.yaml # Package lock file
 ├── README.md
-├── stylelint.config.js # Stylelint 配置文件，用于样式文件的风格和错误检查
-├── tsconfig.json # TypeScript 配置文件
-├── vite.config.ts # Vite 配置文件，用于定义 Vite 项目的构建和服务选项
-├── vitest.config.ts # 单元测试配置文件
-└── vitest.setup.ts # 单元测试环境初始化配置
+├── stylelint.config.js # Stylelint configuration file for style file style and error checking
+├── tsconfig.json # TypeScript configuration file
+├── vite.config.ts # Vite configuration file for defining Vite project build and service options
+├── vitest.config.ts # Unit test configuration file
+└── vitest.setup.ts # Unit test environment initialization configuration
 ```
 
-## 🔄 降级指南
+## 🔄 Downgrade Guide
 
 ### To downgrade to React 18, execute:
 
@@ -219,7 +219,7 @@ The project supports multiple environment configurations:
 pnpm install react@18.3.1 react-dom@18.3.1
 ```
 
-Note: Need to replace React 19 specific features
+Note: Need to replace React 19 specific features:
 
 - Replace RouterTitle component and page dynamic title setting with react-helmet
 
@@ -227,7 +227,7 @@ Note: Need to replace React 19 specific features
 
 - You can manually modify the electron version in package.json to a lower version, supporting a minimum version of 25.0.0
 
-## 🤝 贡献指南
+## 🤝 Contribution Guide
 
 We welcome Issue submissions and Pull Requests. Please ensure:
 
@@ -242,7 +242,7 @@ We welcome Issue submissions and Pull Requests. Please ensure:
 
 ## 🌟 支持项目
 
-如果这个项目对你有帮助，请给它一个 Star ⭐️
+If this project helps you, please give it a Star ⭐️
 
 ---
 

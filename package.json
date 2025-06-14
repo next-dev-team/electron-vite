@@ -1,7 +1,7 @@
 {
   "name": "electron-vite-react",
   "version": "1.0.0",
-  "description": "一套基于electron、react19、ts、vite6的项目模板,帮助快速搭建react项目",
+  "description": "A project template based on Electron, React 19, TypeScript, and Vite 6, designed to help quickly set up React applications.",
   "keywords": [
     "electron",
     "react19 ts template",
@@ -10,14 +10,14 @@
     "template",
     "vite"
   ],
-  "homepage": "https://github.com/liangskyli/electron-vite-react",
-  "bugs": "https://github.com/liangskyli/electron-vite-react/issues",
+  "homepage": "https://github.com/next-dev-team/electron-vite",
+  "bugs": "https://github.com/next-dev-team/electron-vite/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/liangskyli/electron-vite-react"
+    "url": "https://github.com/next-dev-team/electron-vite"
   },
   "license": "MIT",
-  "author": "liangsky <640634387@qq.com>",
+  "author": "sila",
   "type": "module",
   "main": "./dist-electron/main/index.cjs",
   "scripts": {
@@ -46,7 +46,7 @@
     "test": "vitest run",
     "test-u": "vitest -u run",
     "typecheck": "tsc --noEmit",
-    "update:deps": "npm run update --interactive --latest"
+    "update:deps": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
     "electron-log": "^5.3.3",
