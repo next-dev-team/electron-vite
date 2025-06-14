@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "Ant Design Components": {
+      "command": "npx",
+      "args": ["@jzone-mcp/antd-components-mcp"]
+    }
+  }
+}
