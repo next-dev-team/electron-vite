@@ -34,7 +34,7 @@
     "dev:mock:web": "vite -m dev-mock",
     "dev:pro": "electron-vite -m pro",
     "dev:test": "electron-vite -m test",
-    "preinstall": "npx only-allow yarn && patch-package",
+    "preinstall": "patch-package",
     "lint:all": "npm run lint:eslint && npm run lint:style && npm run lint:format",
     "lint:eslint": "eslint --max-warnings 0  \"**/*.{ts,tsx,js,jsx,cjs,mjs}\" --fix",
     "lint:format": "prettier --write \"**/*.{ts,tsx,js,jsx,cjs,mjs,html,less,scss,css,json}\"",
