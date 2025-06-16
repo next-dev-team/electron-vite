@@ -1,4 +1,4 @@
-import { contextBridge } from 'electron';
+import { contextBridge, ipcRenderer } from 'electron';
 import { initPreloadLogger } from '../common/logger/preload.ts';
 import checkUpdate from './ipc/check-update.ts';
 import { getTestHandle1 } from './ipc/test.ts';
@@ -13,6 +13,9 @@ const api = {
   getTestHandle1,
   user32,
   checkUpdate,
+  send: (type: string, msg: unknown) => {
+    ipcRenderer.send(type, msg);
+  },
 };
 
 contextBridge.exposeInMainWorld(apiKey, api);

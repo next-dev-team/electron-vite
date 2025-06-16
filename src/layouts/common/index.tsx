@@ -1,13 +1,18 @@
-import { Outlet, useLocation } from 'react-router';
+import { Outlet } from 'react-router';
+import { Button } from 'antd';
 import RouterTitle from '@/layouts/common/components/router-title.tsx';
 
 const CommonLayout = () => {
-  const location = useLocation();
-
   return (
     <>
       <RouterTitle />
-      <div className="txt-center pt20">router pathname:{location.pathname}</div>
+      <Button
+        style={{ margin: '10px' }}
+        type="primary"
+        onClick={() => window.open('http://localhost:42000/', '_blank')}
+      >
+        Open Server
+      </Button>
       <Outlet />
     </>
   );
