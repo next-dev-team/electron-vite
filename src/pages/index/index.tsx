@@ -6,6 +6,7 @@ import {
   Input,
   Layout,
   Modal,
+  Popconfirm,
   Select,
   Table,
   message,
@@ -107,15 +108,21 @@ const Index = () => {
           >
             Edit
           </Button>
-          <Button
-            type="primary"
-            danger
-            icon={<DeleteOutlined />}
-            onClick={() => handleDelete(record.id)}
-            style={{ marginLeft: 8 }}
+          <Popconfirm
+            title="Are you sure to delete this user?"
+            onConfirm={() => handleDelete(record.id)}
+            okText="Yes"
+            cancelText="No"
           >
-            Delete
-          </Button>
+            <Button
+              type="primary"
+              danger
+              icon={<DeleteOutlined />}
+              style={{ marginLeft: 8 }}
+            >
+              Delete
+            </Button>
+          </Popconfirm>
         </div>
       ),
     },
@@ -131,7 +138,7 @@ const Index = () => {
           alignItems: 'center',
         }}
       >
-        <h1 style={{ margin: '0 20px' }}>User Management</h1>
+        <h1 style={{ margin: '0 20px' }}>User</h1>
         <Button
           type="primary"
           icon={<PlusOutlined />}
@@ -139,6 +146,7 @@ const Index = () => {
             setEditingUser(null);
             setIsModalVisible(true);
           }}
+          style={{ marginLeft: 'auto' }}
         >
           Create User
         </Button>
