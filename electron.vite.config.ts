@@ -1,4 +1,4 @@
-import type { ElectronViteConfig} from 'electron-vite';
+import type { ElectronViteConfig } from 'electron-vite';
 import { bytecodePlugin } from 'electron-vite';
 import { externalizeDepsPlugin } from 'electron-vite';
 import { defineConfig, mergeConfig } from 'electron-vite';
