@@ -1,8 +1,7 @@
 {
   "mcpServers": {
-    "Ant Design Components": {
-      "command": "npx",
-      "args": ["@jzone-mcp/antd-components-mcp"]
+    "context7": {
+      "url": "https://mcp.context7.com/mcp"
     }
   }
 }

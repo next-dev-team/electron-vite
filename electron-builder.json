@@ -6,7 +6,13 @@
     "output": "dist-release/${version}"
   },
   "files": ["dist-electron"],
-  "asarUnpack": ["resources/**"],
+  "asarUnpack": [
+    "resources/**",
+    "node_modules/go-get-folder-size/**/*",
+    "node_modules/7zip-bin/**/*",
+    "node_modules/sweetalert2/**/*",
+    "node_modules/@cocktailpeanut/**/*"
+  ],
   "mac": {
     "artifactName": "${productName}_${version}.${ext}",
     "target": ["dmg", "zip"]
@@ -33,5 +39,6 @@
     "provider": "generic",
     "channel": "latest",
     "url": "http://localhost:5173/sub/download/"
-  }
+  },
+  "buildDependenciesFromSource": true
 }
