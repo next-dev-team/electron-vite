@@ -6299,10 +6299,10 @@ javascript-natural-sort@^0.7.1:
   resolved "https://registry.npmmirror.com/javascript-natural-sort/-/javascript-natural-sort-0.7.1.tgz#f9e2303d4507f6d74355a73664d1440fb5a0ef59"
   integrity sha512-nO6jcEfZWQXDhOiBtG2KvKyEptz7RVbpGP4vTD2hLBdmNQSsCiicO2Ioinv6UI4y9ukqnBpy+XZ9H6uLNgJTlw==
 
-jimini@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.npmmirror.com/jimini/-/jimini-0.0.7.tgz#4baf1b9acc398a16e9f9bbcd11c277784e41e3a3"
-  integrity sha512-uclGn8jZbsq9Eoh/++rwVosiRPpBdKoXNm73D4EGrHUZdcjgZ0/UC9S8SBTbJdjUDS8tcOy0QnprelqA+lE9Pg==
+jimini@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.npmmirror.com/jimini/-/jimini-0.0.8.tgz#11ce9042cfc838b7353a24a0234c937e2892164a"
+  integrity sha512-17xzrn62Sh1b/+HWdaoKQH14NUs01x2nEVoQE5rLi7esf/Oij7IXc5ECy2i9CDIJQOwppXzUwcJrA2aJpMnFtA==
   dependencies:
     lodash "^4.17.21"
 
@@ -7994,10 +7994,10 @@ pinkie@^2.0.0:
   resolved "https://registry.npmmirror.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
   integrity sha512-MnUuEycAemtSaeFSjXKW/aroV7akBbY+Sv+RkyqFjgAe73F+MR0TBWKBRDkmfWq/HiFmdavfZ1G7h4SPZXaCSg==
 
-pinokiod@3.9.28:
-  version "3.9.28"
-  resolved "https://registry.yarnpkg.com/pinokiod/-/pinokiod-3.9.28.tgz#5389e4cdda32731e43f7a4877305b32e2c9b8143"
-  integrity sha512-4nu3aeKPYcx7faKe2eXnjClv8WvVduRm0BkiTumENFfpNZ+TEIISaLNmZ2E0oyatlgwXAou4K5bCuxT/CysLuA==
+pinokiod@^3.11.0:
+  version "3.11.0"
+  resolved "https://registry.npmmirror.com/pinokiod/-/pinokiod-3.11.0.tgz#7f062a8b9039431645501356e2f75d1c7b1d2e34"
+  integrity sha512-qOCjY88vHvQ50QMGOxZHeTlIDkU+prG9Z5QW7XtrWpLxrZaCMSBE2shrHfz0WkaYxBglI3JHhMfqh9Kb/UfBGQ==
   dependencies:
     "7zip-min-win-asar-support" "^1.4.4"
     "@homebridge/node-pty-prebuilt-multiarch" "0.12.0-beta.5"
@@ -8028,7 +8028,7 @@ pinokiod@3.9.28:
     http-terminator "^3.2.0"
     https "^1.0.0"
     isomorphic-git "^1.23.0"
-    jimini "^0.0.7"
+    jimini "^0.0.8"
     jsdom "^24.0.0"
     key-store "^1.2.0"
     kill-sync "^1.0.3"
